@@ -1,0 +1,682 @@
+/*tudo que estiver dentro da tag main vai ser adicionado aqui neste layout*/
+/*HEADER*/
+.main-container {
+    max-width: 80vw;
+    height: 100vh;
+    margin-left: 320px;
+    margin-right: 56px;
+}
+/*barra de fundo que preenche todo o cabeçalho*/
+.header__navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: var(--fa-color12);
+}
+.header__navigation .navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__navigation .navigation .arrow-left{
+    margin-right: 1.25rem;
+}
+/*setas direita esquerda*/
+.arrow-left {
+    position: relative;
+    left: 320px;
+    margin-top: 0px;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/*seta para a direita*/
+.arrow-right{
+    position: relative;
+    left: 400px;
+    margin-top: 0px;
+    background: transparent;
+    border: none;
+    color: var(--fa-color);
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.arrow-left, .arrow-right{
+    position: fixed;
+    top: 45px;
+    margin-left: 50px;
+}
+/*Login entrar*/
+.header__login{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+/*barra de pesquisa*/
+.header__search{
+    position: fixed;
+    left: 500px;
+    margin-top: 0px;
+    padding: 12px 100px 0px 20px;
+    align-items: center;
+    width: 364px;
+    height: 48px;
+    background-color: var(--bg-color);
+    border-radius: 500px;
+    border: 1px;
+    white-space: nowrap;
+}
+.navigation .header__search::selection{
+    background-color: var(--fa-color);
+    color: white
+}
+/*imagem lupa*/
+.header__search img{
+    width: 16px;
+    height: px;
+    margin-left: 10px;
+}
+/*conteúdo escrito dentro da barra de pesquisa*/
+.header__search input{
+    background: transparent;
+    border: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 390px;
+    outline: none;
+    color: var(--fa-color); /*cor da fonte da barra de pesquisa*/
+}
+/*Botão de inscrever-se*/
+.header__login .subscribe{
+    color: var(--fa-color);
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    margin-right: 32px;
+    display: flex;
+    justify-content: left;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.subscribe:hover{  /*pseudo-classe*/
+    text-decoration: underline;
+}
+/*Botão de entrar*/
+.header__login .login{
+    position: relative;
+    top:0px;
+    margin-right: -1000px;
+    color: var(--fa-colorb);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.main-container .header__navigation .navigation .header__download, .header__notification{
+    display: inline-block;
+    margin-left: 10px
+}
+/*notificações*/
+.header__aditional-content .header__notification{
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    cursor: pointer;
+}
+.header__notification :hover{   /*pseudo-classe*/
+   text-decoration: underline;
+}
+/*baixar aqplicativo*/
+.header__navigation .navigation .header__download{
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    cursor: pointer;
+}
+.header__download :hover{
+    text-decoration: underline;
+}
+/*Conteúdo do site com playlists e sugestões*/
+.playlist .session{
+    color: var(--text-base-light);
+    font-size: 24;
+    font-weight: 700;
+  }
+  .offer__scroll-container{
+    max-height: 43vh;
+    margin: 24px;
+    overflow-y: auto;
+  }
+.offer__list-item {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+    margin-top: 16px;
+}
+.card1 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(255, 0, 140), rgb(122, 166, 233)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card1 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card1 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 2*/
+.card2 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(55, 53, 73), rgb(122, 166, 233)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card2 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card2 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD3*/
+.cardIII{
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(238, 179, 16), rgb(122, 159, 216)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.cardIII .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.cardIII .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 4*/
+.card4 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(231, 92, 92)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card4 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card4 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 5*/
+.card5 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(7, 3, 24), rgb(182, 0, 112)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card5 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card5 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 6*/
+.card6 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(228, 211, 164), rgb(238, 127, 0)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card1 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card6 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+.card6 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(240, 181, 127), rgb(199, 125, 41)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card6 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card6 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 7*/
+.card7 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(20, 198, 204), rgb(74, 99, 88)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card7 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card7 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 8*/
+.card8 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(73, 51, 32), rgb(37, 9, 2)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card8 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card8 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 9*/
+.card9 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(32, 32, 32), rgb(137, 139, 141)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card9 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card9 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 10*/
+.card10 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(81, 63, 119), rgb(70, 17, 17)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card10 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card10 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 11*/
+.card11 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(19, 24, 49), rgb(114, 114, 114)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card11 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card11 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}
+/*CARD 12*/
+.card12 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(224, 226, 115), rgb(184, 231, 233)); /* Cor de fundo sólida */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
+    position: relative; /* Para posicionar a imagem do álbum */
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
+    padding: 10px;
+}
+  
+.card-title, a{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card12 .album-image1 img{
+    width: 150px;
+    border-radius: 8px;
+}
+
+.card12 .album-image1 {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg); /* Rotaciona a imagem do álbum */
+    border-radius: 10px;
+}

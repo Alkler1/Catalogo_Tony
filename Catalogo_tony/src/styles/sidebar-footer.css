@@ -1,0 +1,190 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: var(--font-dm-sans);
+}
+.alinhamento_de_texto {
+    text-align: left;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+    color: transparent;
+}
+.sidebar_navigation {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+.sidebar_navigation .logo {
+    background: #121212;
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+.sidebar_navigation .logo img {
+    width: 80px
+}
+.sidebar nav ul {
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+.sidebar ul li {
+    padding: 10px 0;
+}
+.sidebar nav ul li a{
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 20px;
+}
+/*Conteúdo relacionado a segunda div*/
+/*Biblioteca / plus */
+.library {
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4px 8px;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14;
+    margin-top: 10px; 
+}
+.library .library__content {
+    display: flex;
+    justify-content: space-between;
+}
+.library .library__button {
+    display: flex;
+    margin-right: 10px;
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    padding: 20px 10px;
+}
+.library .library__button .fa {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 300;
+    padding-right: px;
+}
+.library .library__content .fa-plus {
+    margin: 24px 10px;
+    cursor: pointer;
+    
+}
+/*Crie sua playlist*/
+.section-playlist {
+    display: flex-end;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #242424;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+.section-playlist .section-playlist__content {
+    display: flex;
+    flex-direction: column;
+}
+.section-playlist__content .text {  /*edição dos textos "crie sua playlist" e "é facil vamos te ajudar"*/
+    padding-bottom: 20px;
+    color: #fff;
+}
+.section-playlist__content .title{  /*texto "crie sua playlist*/
+    font-weight: 700;
+}
+.section-playlist__content .subtitle{  /*texto "é fácil vamos te ajudar"*/
+    font-weight: 500;
+    font-size: 12px;
+}
+.section-playlist__content .section-playlist__button{     /*botão de criar playlist*/
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 25%;
+    border: 0px;
+    width: 113px;
+    cursor: pointer;
+}
+.sidebar .cookies {
+    margin: 25px 20px;
+}
+.sidebar .cookies a{    /*texto de cookies*/
+    margin-left: 33%;
+    color: #b3b3b3;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+}
+.sidebar .cookies a:hover{  /*pseudo-classe*/
+    text-decoration: underline;
+}
+.language .language__button{
+    margin-left: 19%;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #878787;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 170px;
+    padding: 8px;
+    border-radius: 20px;
+}
+/*menu footer*/
+.disclaimer-premium {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    background-image: linear-gradient(to right, rgb(255, 0, 140), rgb(122, 166, 233)); /* Cor de fundo */
+    padding: 20px;
+    color: #ffffff; /* Cor do texto */
+    position: fixed;
+    width: 100vw;
+    top: 92vh;
+    font-weight: 100;
+  }
+  
+.disclaimer-premium .text .disclaimer-premium-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.disclaimer-premium .text .disclaimer-premium-subtitle {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.disclaimer-premium .text .disclaimer__button{
+    /* Estilos para o botão */
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  h2 {
+    color: #ffff;
+  }
