@@ -178,7 +178,7 @@
 .card1 {
     width: 300px;
     height: 200px;
-    background-image: linear-gradient(to right, rgb(255, 0, 140), rgb(122, 166, 233)); /* Cor de fundo sólida */
+    background-image: linear-gradient(to right, rgb(255, 145, 0), rgb(238, 255, 0)); /* Cor de fundo sólida */
     margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
@@ -256,7 +256,7 @@
 .cardIII{
     width: 300px;
     height: 200px;
-    background-image: linear-gradient(to right, rgb(238, 179, 16), rgb(122, 159, 216)); /* Cor de fundo sólida */
+    background-image: linear-gradient(to right, rgb(255, 145, 0), rgb(238, 255, 0)); /* Cor de fundo sólida */
     margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
@@ -334,7 +334,7 @@
 .card5 {
     width: 300px;
     height: 200px;
-    background-image: linear-gradient(to right, rgb(7, 3, 24), rgb(182, 0, 112)); /* Cor de fundo sólida */
+    background-image: linear-gradient(to right, rgb(255, 145, 0), rgb(238, 255, 0)); /* Cor de fundo sólida */
     margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
@@ -450,7 +450,7 @@
 .card7 {
     width: 300px;
     height: 200px;
-    background-image: linear-gradient(to right, rgb(20, 198, 204), rgb(74, 99, 88)); /* Cor de fundo sólida */
+    background-image: linear-gradient(to right, rgb(255, 145, 0), rgb(238, 255, 0)); /* Cor de fundo sólida */
     margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
@@ -528,7 +528,7 @@
 .card9 {
     width: 300px;
     height: 200px;
-    background-image: linear-gradient(to right, rgb(32, 32, 32), rgb(137, 139, 141)); /* Cor de fundo sólida */
+    background-image: linear-gradient(to right, rgb(255, 145, 0), rgb(238, 255, 0)); /* Cor de fundo sólida */
     margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Esconde a imagem do álbum que ultrapassa as bordas */
