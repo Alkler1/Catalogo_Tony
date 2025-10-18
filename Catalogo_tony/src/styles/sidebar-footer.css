@@ -158,7 +158,7 @@ body {
 /*menu footer*/
 .disclaimer-premium {
     text-align: center; /* Centraliza o conteúdo horizontalmente */
-    background-image: linear-gradient(to right, rgb(255, 0, 140), rgb(122, 166, 233)); /* Cor de fundo */
+    background-image: linear-gradient(to right, rgb(255, 196, 0), rgb(151, 43, 43)); /* Cor de fundo */
     padding: 20px;
     color: #ffffff; /* Cor do texto */
     position: fixed;
