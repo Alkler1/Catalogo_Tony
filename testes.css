@@ -1,0 +1,66 @@
+
+  footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  footer button {
+    /* Estilos para o botão */
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  /*CONTEÚDO ORIGINAL*/
+  .cards {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.cards span {
+    padding: 16px;
+    position: absolute;
+    color: var(--text-base-light);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+
+.playlist .session{
+  color: var(--text-base-light);
+  font-size: 24;
+  font-weight: 700;
+}
+.offer__scroll-container{
+  max-height: 43vh;
+  margin: 24px;
+  overflow-y: auto;
+}
+.offer__list-item {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  gap: 16px;
+  margin-top: 16px;
+}
+.cards {
+  position: relative;
+  width: 220px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.cards span {
+  padding: 16px;
+  position: absolute;
+  color: var(--text-base-light);
+  font-size: 24px;
+  font-weight: 700;
+}
