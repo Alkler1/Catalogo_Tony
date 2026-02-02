@@ -9,3 +9,12 @@ itemClicavel.addEventListener('click', function() {
     // Redireciona a janela para a URL
     window.location.href = urlDeDestino;
 });
+var d = window.document.getElementById('h1-material')
+        d.style.color = 'white'
+        d.style.fontFamily = 'Arial'
+        d.style.fontSize = '24px'
+
+var e = window.document.getElementById('h1-perfuração')
+        d.style.color = 'white'
+        d.style.fontFamily = 'Arial'
+        d.style.fontSize = '24px'
