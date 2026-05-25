@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Imersão</title>
-    <link rel="stylesheet" href="Catalogo_tony/src/styles/reset.css">
-    <link rel="stylesheet" href="Catalogo_tony/src/styles/vars.css">
-    <link rel="shortcut icon" href="Catalogo_tony/imagens/ícones/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="Catalogo_tony/src/styles/sidebar-footer.css">
-    <link rel="stylesheet" href="Catalogo_tony/src/styles/main_content.css">
-    <link rel="stylesheet" href="Catalogo_tony/src/styles/media-queries.css">
+    <title>Catálogo de Jóias Tony</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/vars.css">
+    <link rel="shortcut icon" href="src/assets/icons/tony_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="src/styles/main_content.css">
+    <link rel="stylesheet" href="src/styles/media-queries.css">
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
@@ -17,13 +17,15 @@
     <!-- Links para trazer os ícones via CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/ícones/favicon.ico" type="image/png">
 </head>
 <body>
     <div class="sidebar">
         <nav class="sidebar_navigation">
             <div class="logo">
                 <a href="">
-                <img src="Catalogo_tony/src/assets/icons/tony_logo.png" alt="logo-tonypiercing">
+                <img src="src/assets/icons/tony_logo.png" alt="logo-tonypiercing">
                 </a> 
                 <h1>Catalogo de joias</h1>
             </div>  
@@ -52,10 +54,10 @@
             </div>
             <section class="section-playlist">
                 <div class="section-playlist__content">
-                    <span class="text title">Histórico de compras</span>
-                    <span class="text subtitle">Consultar últimas compras que foram feitas</span>
+                    <span class="text title">Crie sua primeira playlist</span>
+                    <span class="text subtitle">É fácil vamos te ajudar!</span>
                     <button class="section-playlist__button">
-                        <span>Clique aqui!</span>
+                        <span>Criar playlist</span>
                     </button>
                 </div>
             </section>
@@ -97,7 +99,7 @@
                             <span class="fa fa-bell"></span>
                             <span>Novidades</span>
                         </button>
-                        <!-- Exclua esse conteúdo caso necessário
+                        <!-- Remover este conteúdo caso necessário
                         <button  class="header__download">
                             <i class="fa fa-bag-shopping"></i>
                             <a href="https://www.tonypiercing.com.br/" target="_blank"><span>Acesse o Site</span></a>
@@ -112,243 +114,127 @@
                     <div class="playlist">
                         <!--COLOCAR O BOM DIA | BOA TARDE | BOA NOITE -->
                         <h1 id="greeting"></h1>
-                        <h2 class="session">Bem vindo ao cátalogo de joias Tony Piercing. Ficamos felizes em te ver por aqui! <br>
-                        Para começarmos, Gostaria de estar escolhendo o material da sua joia, ou para qual perfuração ela seria?</h2>
+                        <h2 class="session">Recomendações</h2>
                     </div>
                 </div>
 
                 <!-- List item 1-->
                 <div class="offer__scroll-container"> <!--card-container-->
-                    <h1 id="h1-material">Material</h1>
                     <div class="offer__List"> <!--card-->
                         <section class="offer__list-item"> 
-                            <!--CARD 1 -->
-                            
-                            <a href="Páginas/jóias_básicas.html" class="card-card1">
-                                <div class="card1">
-                                        <div class="card-title">Aço Cirurgico</div>
-                                        <div class="album-image1">
-                                            <img src="src/assets/playlist/Clicker Segmento2.0.png" alt="">
-                                        </div> 
-                                </div>
-                            </a>
-                            <!--CARD 2 -->
-                            <a href="" class="card-card1">
-                                <div class="card2">
-                                        <div class="card-title">Titânio</div>
-                                        <div class="album-image1">
-                                            <img src="src/assets/" alt="">
-                                        </div> 
-                                </div>
-                            </a>
-                            <div  class="Perfuração">
+                            <div id="vitrine-categorias">
+                                <!--CARD 1 -->
+                                <a href="Páginas/jóias_básicas.html" class="card-card1">
+                                    <div class="card1">
+                                            <div class="card-title"><Table>Jóias básicas</Table></div>
+                                            <div class="album-image1">
+                                                <img src="src/assets/card_images/Joias_básicas.png" alt="">
+                                            </div> 
+                                    </div>
+                                </a>
+                                <!--CARD 2 -->
+                                <a href="" class="card-card1">
+                                    <div class="card2">
+                                            <div class="card-title">Umbigo</div>
+                                            <div class="album-image1">
+                                                <img src="src/assets/card_images/piercing_umbigo_card.png" alt="">
+                                            </div> 
+                                    </div>
+                                </a>
                                 <!--CARD 3 -->
                                 <a href="" class="card-card1">
                                     <div class="cardIII">
-                                            <div class="card-title">Conch</div>
+                                            <div class="card-title">Labret Ponto de luz</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/card_images/Ponto_de_luz_card.png" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 4 -->
                                 <a href="" class="card-card1">
                                     <div class="card4">
-                                            <div class="card-title">Hélix</div>
+                                            <div class="card-title">Cluster</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/card_images/cluster_card.png" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 5 -->
                                 <a href="" class="card-card1">
                                     <div class="card5">
-                                            <div class="card-title">Mamilo</div>
+                                            <div class="card-title">Mamilo trabalhado</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/card_images/Mamilo_trabalhado_card.png" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 6 -->
                                 <a href="" class="card-card1">
                                     <div class="card6">
-                                            <div class="card-title">Cristina</div>
+                                            <div class="card-title">Jóia Intima</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/card_images/Intima_card.png" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 7 -->
                                 <a href="" class="card-card1">
                                     <div class="card7">
-                                            <div class="card-title">Clickers Segmento</div>
+                                            <div class="card-title">Clickers Básico</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/card_images/Clicker_segmento_card.png" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 8 -->
                                 <a href="" class="card-card1">
                                     <div class="card8">
-                                            <div class="card-title">Básicas aço Cirurgico</div>
+                                            <div class="card-title">Clicker trabalhado (conch Hélix)</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/playlist/9.jpeg" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 9 -->
                                 <a href="" class="card-card1">
                                     <div class="card9">
-                                            <div class="card-title">Básicas Titânio</div>
+                                            <div class="card-title">Nostril, Aba Nasal</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/playlist/11.jpeg" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 10 -->
                                 <a href="" class="card-card1">
                                     <div class="card10">
-                                            <div class="card-title">Ponto de luz (titânio aço)</div>
+                                            <div class="card-title">Brincos</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/playlist/12.jpeg" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 11 -->
                                 <a href="" class="card-card1">
                                     <div class="card11">
-                                            <div class="card-title">Nostril</div>
+                                            <div class="card-title">Septo Trabalhado</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/playlist/13.jpeg" alt="">
                                             </div> 
                                     </div>
                                 </a>
                                 <!--CARD 12 -->
                                 <a href="" class="card-card1">
                                     <div class="card12">
-                                            <div class="card-title">Cluster</div>
+                                            <div class="card-title">MicroDermal e Surface</div>
                                             <div class="album-image1">
-                                                <img src="src/assets/" alt="">
+                                                <img src="src/assets/playlist/14.jpeg" alt="">
                                             </div> 
                                     </div>
                                 </a>
                             </div>
-                        </section>
-                    </div>
-                    <h1 id="h1-perfuração">Perfurações</h1>
-                    <div class="offer2__List"> <!--card-->
-                        <section class="offer__list-item"> 
-                            <!--CARD 1 -->
-                            
-                            <a href="Páginas/jóias_básicas.html" class="card-card1">
-                                <div class="card1">
-                                        <div class="card-title">Aço Cirurgico</div>
-                                        <div class="album-image1">
-                                            <img src="Catalogo_tony/src/assets/card_images/seggmento.png" alt="">
-                                        </div> 
+                                <div id="resultados-busca" style="display: none; width: 100%; gap: 20px; flex-wrap: wrap;">
                                 </div>
-                            </a>
-                            <!--CARD 2 -->
-                            <a href="" class="card-card1">
-                                <div class="card2">
-                                        <div class="card-title">Titânio</div>
-                                        <div class="album-image1">
-                                            <img src="src/assets/" alt="">
-                                        </div> 
-                                </div>
-                            </a>
-                            <div  class="Perfuração">
-                                <!--CARD 3 -->
-                                <a href="" class="card-card1">
-                                    <div class="cardIII">
-                                            <div class="card-title">Conch</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 4 -->
-                                <a href="" class="card-card1">
-                                    <div class="card4">
-                                            <div class="card-title">Hélix</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 5 -->
-                                <a href="" class="card-card1">
-                                    <div class="card5">
-                                            <div class="card-title">Mamilo</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 6 -->
-                                <a href="" class="card-card1">
-                                    <div class="card6">
-                                            <div class="card-title">Cristina</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 7 -->
-                                <a href="" class="card-card1">
-                                    <div class="card7">
-                                            <div class="card-title">Clickers Segmento</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 8 -->
-                                <a href="" class="card-card1">
-                                    <div class="card8">
-                                            <div class="card-title">Básicas aço Cirurgico</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 9 -->
-                                <a href="" class="card-card1">
-                                    <div class="card9">
-                                            <div class="card-title">Básicas Titânio</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 10 -->
-                                <a href="" class="card-card1">
-                                    <div class="card10">
-                                            <div class="card-title">Ponto de luz (titânio aço)</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 11 -->
-                                <a href="" class="card-card1">
-                                    <div class="card11">
-                                            <div class="card-title">Nostril</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                                <!--CARD 12 -->
-                                <a href="" class="card-card1">
-                                    <div class="card12">
-                                            <div class="card-title">Cluster</div>
-                                            <div class="album-image1">
-                                                <img src="src/assets/" alt="">
-                                            </div> 
-                                    </div>
-                                </a>
-                            </div>
+                
                         </section>
                     </div>
                  </div>
@@ -360,12 +246,17 @@
             <span class="disclaimer-premium__title">Acesse também nosso site.</span>
             <span class="disclaimer-premium__subtitles">E tenha acesso as novidades que estão rolando e a descontos exclusivos.</span>
             <button class="disclaimer__button">
-                <span>Acessar site</span>
+                <a href="https://www.tonypiercing.com.br/">
+                    <span>Acessar site</span>
+                </a>
+                <p>
+                </p>
             </button>
         </div>   
     </footer>
 
-    <script src="index.js"></script>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
