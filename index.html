@@ -19,6 +19,64 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/ícones/favicon.ico" type="image/png">
+    <style>
+    /* Estilização para os novos cards de produto real na busca da Home */
+    .link-produto-home {
+        text-decoration: none;
+        transition: transform 0.2s;
+    }
+
+    .link-produto-home:hover {
+        transform: scale(1.03); /* Efeito sutil de zoom ao passar o mouse */
+    }
+
+    .card-produto-home {
+        background-color: #121212;
+        border: 1px solid #282828;
+        border-radius: 8px;
+        width: 220px; /* Tamanho perfeito de card de e-commerce */
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagem-produto-home img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 6px;
+        background-color: #1e1e1e;
+    }
+
+    .info-produto-home {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .nome-produto-home {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        /* Limita o texto a duas linhas para não quebrar o layout se o nome for grande */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 38px;
+    }
+
+    .preco-produto-home {
+        color: #ffcc00; /* Amarelo padrão que você escolheu */
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
     <div class="sidebar">
