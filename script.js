@@ -12,18 +12,16 @@ itemClicavel.addEventListener('click', function() {
 // 2. MAPEAMENTO DE ELEMENTOS GLOBAIS
 // =========================================================================
 const barraPesquisa = document.getElementById('search-input');
-const vitrineCategorias = document.getElementById('vitrine-categorias');
-
-// 💡 AQUI ESTÁ O SEGREDO: O seu container de resultados da busca na Home 
-// é a própria vitrine-categorias que vamos limpar e usar de Grid!
 const containerResultados = document.getElementById('vitrine-categorias');
 
+// Guardamos o HTML original da vitrine (as categorias coloridas) assim que a página carrega
+const htmlCategoriasOriginais = containerResultados.innerHTML;
+let buscaAtiva = false;
 
 // =========================================================================
 // 3. FUNÇÃO PRINCIPAL DE RENDERIZAR OS CARDS (Estilo Kabum)
 // =========================================================================
 function renderizarFiltro(joiasFiltradas) {
-    // Liga a vitrine de volta como Grid antes de injetar os cards novos
     containerResultados.style.display = "grid"; 
     containerResultados.innerHTML = "";
 
@@ -50,27 +48,64 @@ function renderizarFiltro(joiasFiltradas) {
     });
 }
 
-
 // =========================================================================
-// 4. O OUVINTE INTELIGENTE DA BARRA DE PESQUISA
+// 4. FUNÇÃO AUXILIAR PARA EXECUTAR A BUSCA (Unificada)
 // =========================================================================
-barraPesquisa.addEventListener('input', () => {
-    const termoBusca = barraPesquisa.value.toLowerCase().trim();
-
-    // Se o usuário apagar o texto da barra, o site dá um F5 falso e recarrega a página 
-    // para fazer as categorias coloridas originais voltarem a aparecer instantaneamente!
-    if (termoBusca === "") {
-        window.location.reload();
+function executarBusca(termo) {
+    if (termo === "") {
+        buscaAtiva = false;
+        containerResultados.innerHTML = htmlCategoriasOriginais;
+        configurarCliquesNosCards(); // Reativa os ouvintes nos cards restaurados
         return;
     }
 
-    // Filtra a lista com base no que foi digitado
+    if (!buscaAtiva) {
+        history.pushState({ tela: "busca" }, "");
+        buscaAtiva = true;
+    }
+
     const joiasEncontradas = listaJoias.filter(joia => {
-        const nomeBate = joia.nome.toLowerCase().includes(termoBusca);
-        const palavraChaveBate = joia.palavrasChave.some(palavra => palavra.toLowerCase().includes(termoBusca));
+        const nomeBate = joia.nome.toLowerCase().includes(termo);
+        const palavraChaveBate = joia.palavrasChave.some(palavra => palavra.toLowerCase().includes(termo));
         return nomeBate || palavraChaveBate;
     });
 
-    // Dispara a função para desenhar os novos cards estilo e-commerce
     renderizarFiltro(joiasEncontradas);
+}
+
+// =========================================================================
+// 5. OUVINTE DE CLIQUES NOS CARDS DE CATEGORIAS
+// =========================================================================
+function configurarCliquesNosCards() {
+    const cardsCategorias = document.querySelectorAll('.card-link');
+    
+    cardsCategorias.forEach(card => {
+        card.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            const categoriaSelecionada = card.getAttribute('data-categoria');
+            if (categoriaSelecionada) {
+                barraPesquisa.value = categoriaSelecionada;
+                executarBusca(categoriaSelecionada);
+            }
+        });
+    });
+}
+
+// Ativa os cliques pela primeira vez ao carregar o site
+configurarCliquesNosCards();
+
+// Ouvinte da digitação na barra de pesquisa
+barraPesquisa.addEventListener('input', () => {
+    const termoBusca = barraPesquisa.value.toLowerCase().trim();
+    executarBusca(termoBusca);
+});
+
+// =========================================================================
+// 6. DETECTAR SETA DE VOLTAR DO NAVEGADOR (UX de Qualidade)
+// =========================================================================
+window.addEventListener('popstate', () => {
+    barraPesquisa.value = "";
+    buscaAtiva = false;
+    containerResultados.innerHTML = htmlCategoriasOriginais;
+    configurarCliquesNosCards(); // Garante que os cards continuem clicáveis ao voltar
 });
