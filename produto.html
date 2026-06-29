@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Jóia</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/vars.css">
+    <link rel="stylesheet" href="src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="src/styles/main_content.css">
+    <link rel="stylesheet" href="src/styles/media-queries.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
+
+    <style>
+        /* Estilos específicos para organizar os lados do produto sem quebrar o main_content.css */
+        .conteudo-detalhes {
+            display: flex;
+            max-width: 1100px;
+            margin: 40px auto;
+            gap: 50px;
+            background-color: #121212;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .lado-esquerdo img {
+            max-width: 380px;
+            border-radius: 8px;
+            background-color: #242424;
+        }
+        .lado-direito {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: #fff;
+        }
+        .preco {
+            font-size: 32px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .btn-voltar {
+            background-color: #242424;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            width: fit-content;
+        }
+        .btn-voltar:hover {
+            background-color: #333;
+        }
+        /* Estilos para a Caixinha Flutuante do Kabum */
+       /* Estilos para a Caixinha Flutuante do Kabum */
+        /* Estilos para a Caixinha Flutuante do Kabum */
+        /* Estilos para a Caixinha Flutuante do Kabum */
+        .header__search {
+            position: relative !important; /* 🌟 FORÇA a sair do 'fixed' e respeitar o topo */
+            left: auto !important;         /* 🌟 Anula os 500px fixos que jogavam ela pra direita */
+            display: flex;
+            align-items: center;
+            width: 320px; 
+            margin-right: 40px; 
+        }
+
+        .dropdown-busca {
+            position: absolute;
+            top: 100%; /* Ajustado para colar perfeitamente logo abaixo da barra */
+            right: 0;  
+            width: 100%; 
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+        }
+
+        /* O desenho de cada linha de produto dentro da caixinha */
+        .item-busca-flutuante {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid #282828;
+            transition: background-color 0.2s;
+        }
+
+        .item-busca-flutuante:last-child {
+            border-bottom: none;
+        }
+
+        .item-busca-flutuante:hover {
+            background-color: #282828; /* Efeito de seleção ao passar o mouse */
+        }
+
+        .item-busca-flutuante img {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #333;
+            object-fit: cover;
+        }
+
+        .item-busca-flutuante .info-mini {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-busca-flutuante .nome-mini {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .item-busca-flutuante .preco-mini {
+            font-size: 12px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <nav class="sidebar_navigation">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="src/assets/icons/tony_logo.png" alt="logo-tonypiercing">
+                </a> 
+                <h1>Catalogo de joias</h1>
+            </div>  
+            <ul class="alinhamento_de_texto">
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-star"></span>
+                        <span>Favoritos</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="main-container">
+            <nav class="header__navigation">
+                <div class="navigation">
+                    <button class="arrow-left" onclick="window.location.href='index.html'">
+                        <img src="src/assets/icons/small-left.png" alt="Seta esquerda">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="src/assets/icons/small-right.png" alt="Seta direita">
+                    </button>
+<div class="header__search">
+    <span>
+        <img src="src/assets/icons/search.png" alt="">
+    </span>
+    <!-- Liberamos o input tirando as travas anteriores -->
+    <input type="text" id="search-input" placeholder="O que você quer procurar?" autocomplete="off">
+    
+    <!-- 🌟 A NOVA CAIXA FLUTUANTE ESTILO KABUM -->
+    <div id="resultados-flutuantes" class="dropdown-busca"></div>
+</div>
+                    <div class="header__login">
+                        <button class="subscribe">Inscreva-se</button>
+                        <button class="login">Entrar</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="conteudo-detalhes">
+                <div class="lado-esquerdo">
+                    <img id="foto-grande" src="" alt="Foto do Produto">
+                </div>
+
+                <div class="lado-direito">
+                    <h1 id="titulo-produto" style="font-size: 28px; font-weight: bold;">Carregando...</h1>
+                    <div id="preco-produto" class="preco">R$ 0,00</div>
+                    
+                    <p id="indicacao-produto" style="font-weight: bold; color: #aaa;"></p>
+                    <p id="tamanhos-produto"></p>
+                    <p id="cores-produto"></p>
+                    <p id="materiais-produto"></p>
+                    
+                    <hr style="border-color: #333; margin: 15px 0;">
+                    
+                    <h3 style="font-size: 18px; font-weight: bold; color: #ffcc00;">Sobre a peça:</h3>
+                    <p id="descricao-produto" style="line-height: 1.6; color: #ddd;"></p>
+
+                    <a href="index.html" class="btn-voltar">← Voltar ao Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dados.js"></script>
+    <script src="produto.js"></script>
+</body>
+</html>
